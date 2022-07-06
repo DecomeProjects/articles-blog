@@ -1,8 +1,11 @@
+@import "../../styles/mixins.scss";
+
 .headerContainer {
   border-bottom: 1px solid #29292e;
 
   div#wrapper {
     display: flex;
+    align-items: center;
     max-width: 70rem;
     margin: 0 auto;
 
@@ -31,11 +34,13 @@
 
     > li {
       > a {
+        display: inline-block;
         padding-inline: 0.5rem;
         line-height: 5rem;
         text-decoration: none;
         color: inherit;
-        transition: color 0.2s;
+
+        @include focus-outline;
 
         &:hover {
           color: var(--clr-yellow);

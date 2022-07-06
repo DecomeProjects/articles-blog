@@ -1,3 +1,4 @@
+import { SignInButton } from './SignInButton';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -6,6 +7,7 @@ export function Header() {
       <div id={styles.wrapper}>
         <div>
           <h1>Articles Blog</h1>
+
           <nav className={styles.navigation}>
             <ul>
               <li className={styles.active}>
@@ -18,7 +20,7 @@ export function Header() {
           </nav>
         </div>
 
-        <button type="button">Sign in with Github</button>
+        <SignInButton />
       </div>
     </header>
   );

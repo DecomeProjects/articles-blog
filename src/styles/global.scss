@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition-property: color, filter, outline-color;
+  transition-duration: 0.2s;
 }
 
 :root {
