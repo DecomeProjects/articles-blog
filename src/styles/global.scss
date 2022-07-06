@@ -1,3 +1,16 @@
+:root {
+  --clr-blue: #61DCFB;
+  --clr-green: #04D361;
+  --clr-yellow: #EBA417;
+
+  --clr-title: #E1E1E6;
+  --clr-text: #A8A8B3;
+  --clr-shape: #1F2729;
+  --clr-background: #121414;
+}
+
 html, body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--clr-background);
+  color: var(--clr-text);
 }
