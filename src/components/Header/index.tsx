@@ -1,11 +1,18 @@
+import { useSession } from 'next-auth/react';
+
+import { SignInButton } from './SignInButton';
+import { Profile } from './Profile';
 import styles from './styles.module.scss';
 
 export function Header() {
+  const { data: session } = useSession();
+
   return (
     <header className={styles.headerContainer}>
       <div id={styles.wrapper}>
         <div>
           <h1>Articles Blog</h1>
+
           <nav className={styles.navigation}>
             <ul>
               <li className={styles.active}>
@@ -18,7 +25,7 @@ export function Header() {
           </nav>
         </div>
 
-        <button type="button">Sign in with Github</button>
+        {!session ? <SignInButton /> : <Profile session={session} />}
       </div>
     </header>
   );
