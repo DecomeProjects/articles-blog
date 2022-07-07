@@ -1,8 +1,13 @@
+import { signIn } from 'next-auth/react';
 import styles from './styles.module.scss';
 
 export function SignInButton() {
+  const handleSignIn = () => {
+    signIn('github');
+  };
+
   return (
-    <button className={styles.button}>
+    <button className={styles.button} onClick={handleSignIn}>
       <svg
         width="24"
         height="24"
