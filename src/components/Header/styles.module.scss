@@ -9,7 +9,7 @@
     max-width: 70rem;
     margin: 0 auto;
 
-    > div {
+    > div:first-child {
       display: flex;
       align-items: center;
       gap: 4.5rem;

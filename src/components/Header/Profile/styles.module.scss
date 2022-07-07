@@ -1,0 +1,35 @@
+@import "../../../styles/mixins.scss";
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem 0.75rem 1rem;
+  height: max-content;
+
+  background-color: var(--clr-shape);
+  border: 0;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  color: var(--clr-title);
+  font-weight: 700;
+  line-height: 1.5rem;
+  outline: 2px solid transparent;
+
+  @include focus-outline;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  > svg path {
+    fill: var(--clr-green);
+  }
+
+  > button {
+    border: 0;
+    background-color: transparent;
+    cursor: inherit;
+    font-size: 0;
+  }
+}

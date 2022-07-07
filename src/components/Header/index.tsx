@@ -1,7 +1,12 @@
+import { useSession } from 'next-auth/react';
+
 import { SignInButton } from './SignInButton';
+import { Profile } from './Profile';
 import styles from './styles.module.scss';
 
 export function Header() {
+  const { data: session } = useSession();
+
   return (
     <header className={styles.headerContainer}>
       <div id={styles.wrapper}>
@@ -20,7 +25,7 @@ export function Header() {
           </nav>
         </div>
 
-        <SignInButton />
+        {!session ? <SignInButton /> : <Profile session={session} />}
       </div>
     </header>
   );
