@@ -1,6 +1,9 @@
 @mixin focus-outline {
+  --outline-offset: -2px;
+
   outline: 2px solid transparent;
-  outline-offset: -2px;
+  outline-offset: var(--outline-offset);
+  outline-style: dashed;
 
   &:focus {
     outline-color: var(--clr-yellow);
