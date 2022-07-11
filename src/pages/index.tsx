@@ -24,19 +24,21 @@ const Home: NextPage = () => {
 
           <div>
             <h2>
-              News about
-              <br />
-              the <span className={styles['text-blue']}>React</span> world
+              <span className={styles['text-blue']}>Organize</span> and
+              <span className={styles['text-blue']}> share </span>
+              your thoughts
             </h2>
 
             <p>
-              Get acess to all the publications
+              Let your experience{' '}
+              <span className={styles['text-blue']}>reach</span> and{' '}
+              <span className={styles['text-blue']}>help</span>
               <br />
-              <span className={styles['text-blue']}>for $9,90 month</span>
+              other developers.
             </p>
           </div>
 
-          <button type="button">Subscribe now</button>
+          <button type="button">Share now</button>
         </main>
 
         <div className={styles.image}>
